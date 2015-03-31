@@ -1,0 +1,15 @@
+Q17.
+
+data1<- read.csv("hw1_data.csv")
+data1.sub <-subset(data1,!is.na(data1[,1]), select = c(Ozone))
+sapply(data1.sub,mean)
+
+
+Q18.
+
+data1<-read.csv("hw1_data.csv")
+data1.sub <- subset(data1,Ozone>31 & Temp>90, select = c(Solar.R))
+# this gives the rows of Solar.R which satisfies the conditions
+sapply(data1.sub,mean)
+
+Hope this helps
